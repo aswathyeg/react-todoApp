@@ -12,15 +12,19 @@ function App() {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (todo !== "") {
-      setTodos([{ id: `${todo}-${Date.now()}` }, todo, ...todos]);
+      setTodos([{ id: `${todo}-${Date.now()}`, todo }, ...todos]);
       setTodo("");
     }
   };
-
+  const handleDelete = () => {};
   return (
     <div className="App">
-      <TodoForm handleChange={handleChange} handleSubmit={handleSubmit} />
-      <TodoList todos={todos} />
+      <TodoForm
+        handleChange={handleChange}
+        handleSubmit={handleSubmit}
+        todo={todo}
+      />
+      <TodoList todos={todos} handleDelete={handleDelete} />
     </div>
   );
 }
