@@ -1,12 +1,12 @@
 import React from "react";
 
-const TodoForm = ({ handleChange, handleSubmit }) => {
+const TodoForm = ({ handleChange, handleSubmit, todo }) => {
   return (
     <div>
       <div className="App-header">TodoApp</div>
       <div className="form">
         <form onClick={handleSubmit}>
-          <input onChange={handleChange} />
+          <input value={todo} onChange={handleChange} />
           <button type="submit">Go</button>
         </form>
       </div>
