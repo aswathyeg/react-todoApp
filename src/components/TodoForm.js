@@ -1,16 +1,6 @@
 import React from "react";
 
-const TodoForm = ({ todo, setTodo, todos, setTodos }) => {
-  const handleChange = (e) => {
-    setTodo(e.target.value);
-  };
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    if (todo !== "") {
-      setTodos([{ id: `${todo}-${Date.now()}` }, todo, ...todos]);
-      setTodo("");
-    }
-  };
+const TodoForm = ({ handleChange, handleSubmit }) => {
   return (
     <div>
       <div className="App-header">TodoApp</div>
