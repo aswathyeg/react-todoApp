@@ -1,30 +1,30 @@
 import React from "react";
-
+import "../App.css";
 const TodoList = ({ todos, handleDelete, handleEdit }) => {
   return (
-    <span>
-      <ul>
-        {todos.map((todos) => (
-          <li key={todos.id}>
+    <ul className="allTodos">
+      {todos.map((todos) => (
+        <li className="singleTodo">
+          <span className="todoText" key={todos.id}>
             {todos.todo}
-            <button
-              onClick={() => {
-                handleEdit(todos.id);
-              }}
-            >
-              Edit
-            </button>
-            <button
-              onClick={() => {
-                handleDelete(todos.id);
-              }}
-            >
-              Delete
-            </button>
-          </li>
-        ))}
-      </ul>
-    </span>
+          </span>
+          <button
+            onClick={() => {
+              handleEdit(todos.id);
+            }}
+          >
+            Edit
+          </button>
+          <button
+            onClick={() => {
+              handleDelete(todos.id);
+            }}
+          >
+            Delete
+          </button>
+        </li>
+      ))}
+    </ul>
   );
 };
 
