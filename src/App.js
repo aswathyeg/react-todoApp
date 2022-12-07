@@ -3,7 +3,7 @@ import "./App.css";
 import TodoForm from "./components/TodoForm";
 import TodoList from "./components/TodoList";
 
-function App() {
+const App = () => {
   const [todo, setTodo] = useState("");
   const [todos, setTodos] = useState([]);
   const [editId, setEditId] = useState(0);
@@ -21,7 +21,7 @@ function App() {
       );
       setTodos(newValue);
       setEditId(0);
-      // setTodo("");
+      //setTodo("");
       return;
     }
     if (todo !== "") {
@@ -41,19 +41,22 @@ function App() {
   };
   return (
     <div className="App">
-      <TodoForm
-        handleSubmit={handleSubmit}
-        todo={todo}
-        editId={editId}
-        setTodo={setTodo}
-      />
-      <TodoList
-        todos={todos}
-        handleDelete={handleDelete}
-        handleEdit={handleEdit}
-      />
+      <div className="container">
+        <h1 style={{ color: "black " }}>Todo App</h1>
+        <TodoForm
+          handleSubmit={handleSubmit}
+          todo={todo}
+          editId={editId}
+          setTodo={setTodo}
+        />
+        <TodoList
+          todos={todos}
+          handleDelete={handleDelete}
+          handleEdit={handleEdit}
+        />
+      </div>
     </div>
   );
-}
+};
 
 export default App;
