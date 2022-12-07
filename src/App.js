@@ -41,17 +41,20 @@ function App() {
   };
   return (
     <div className="App">
-      <TodoForm
-        handleSubmit={handleSubmit}
-        todo={todo}
-        editId={editId}
-        setTodo={setTodo}
-      />
-      <TodoList
-        todos={todos}
-        handleDelete={handleDelete}
-        handleEdit={handleEdit}
-      />
+      <div className="container">
+        <h1 style={{ color: "black " }}>Todo App</h1>
+        <TodoForm
+          handleSubmit={handleSubmit}
+          todo={todo}
+          editId={editId}
+          setTodo={setTodo}
+        />
+        <TodoList
+          todos={todos}
+          handleDelete={handleDelete}
+          handleEdit={handleEdit}
+        />
+      </div>
     </div>
   );
 }
