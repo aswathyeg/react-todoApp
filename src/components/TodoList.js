@@ -1,14 +1,26 @@
 import React from "react";
 
-const TodoList = ({ todos, handleDelete }) => {
+const TodoList = ({ todos, handleDelete, handleEdit }) => {
   return (
     <span>
       <ul>
         {todos.map((todos) => (
           <li key={todos.id}>
             {todos.todo}
-            <button>Edit</button>
-            <button onClick={handleDelete}>Delete</button>
+            <button
+              onClick={() => {
+                handleEdit(todos.id);
+              }}
+            >
+              Edit
+            </button>
+            <button
+              onClick={() => {
+                handleDelete(todos.id);
+              }}
+            >
+              Delete
+            </button>
           </li>
         ))}
       </ul>
