@@ -21,7 +21,7 @@ const App = () => {
       );
       setTodos(newValue);
       setEditId(0);
-      //setTodo("");
+      setTodo("");
       return;
     }
     if (todo !== "") {
