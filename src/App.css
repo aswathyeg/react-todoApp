@@ -1,7 +1,11 @@
 .App {
   text-align: center;
 }
-
+.inputField{
+  width:80px;
+  color:black;
+  
+}
 
 
 /* .App-header {
