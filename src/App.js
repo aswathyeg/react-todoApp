@@ -3,7 +3,7 @@ import "./App.css";
 import TodoForm from "./components/TodoForm";
 import TodoList from "./components/TodoList";
 
-function App() {
+const App = () => {
   const [todo, setTodo] = useState("");
   const [todos, setTodos] = useState([]);
   const [editId, setEditId] = useState(0);
@@ -57,6 +57,6 @@ function App() {
       </div>
     </div>
   );
-}
+};
 
 export default App;
