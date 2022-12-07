@@ -2,7 +2,7 @@ import React from "react";
 import "../App.css";
 const TodoForm = ({ setTodo, handleSubmit, todo, editId }) => {
   return (
-    <form onClick={handleSubmit} className="form">
+    <form onSubmit={handleSubmit} className="form">
       <input
         type="text"
         value={todo}
