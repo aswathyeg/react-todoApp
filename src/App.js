@@ -1,12 +1,11 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import "./App.css";
 import TodoForm from "./components/TodoForm";
 import TodoList from "./components/TodoList";
-
+import { TodoContext } from "./components/context/Context";
 const App = () => {
-  const [todo, setTodo] = useState("");
-  const [todos, setTodos] = useState([]);
-  const [editId, setEditId] = useState(0);
+  const { todo, setTodo, todos, setTodos, editId, setEditId } =
+    useContext(TodoContext);
 
   const handleSubmit = (e) => {
     e.preventDefault();
