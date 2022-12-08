@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useContext } from "react";
 import "../App.css";
-const TodoForm = ({ setTodo, handleSubmit, todo, editId }) => {
+import { TodoContext } from "./context/Context";
+const TodoForm = () => {
+  const { todo, setTodo, editId, handleSubmit } = useContext(TodoContext);
   return (
     <form onSubmit={handleSubmit} className="form">
       <input
