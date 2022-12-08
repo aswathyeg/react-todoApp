@@ -1,19 +1,18 @@
 import React from "react";
-import "../App.css";
-const TodoForm = ({ setTodo, handleSubmit, todo, editId }) => {
+
+const TodoForm2 = ({ handleSubmit, todo, setTodo }) => {
   return (
     <form onSubmit={handleSubmit} className="form">
       <input
         type="text"
         value={todo}
-        className="inputField"
         onChange={(e) => {
           setTodo(e.target.value);
         }}
       />
-      <button type="submit">{editId ? "Edit" : "Go"}</button>
+      <button onClick={handleSubmit}>GO</button>
     </form>
   );
 };
 
-export default TodoForm;
+export default TodoForm2;
