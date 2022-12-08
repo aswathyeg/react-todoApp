@@ -1,44 +1,20 @@
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 import "./App.css";
 import TodoForm from "./components/TodoForm";
 import TodoList from "./components/TodoList";
 import { TodoContext } from "./components/context/Context";
 const App = () => {
-  const { todo, setTodo, todos, setTodos, editId, setEditId } =
-    useContext(TodoContext);
+  const {
+    todo,
+    setTodo,
+    todos,
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
+    editId,
 
-    if (editId) {
-      const editTodo = todos.find((i) => i.id === editId);
-      const updatedTodos = todos.map((t) =>
-        t.id === editTodo.id
-          ? (t = { id: t.id, todo })
-          : { id: t.id, todo: t.todo }
-      );
-      setTodos(updatedTodos);
-      setEditId(0);
-      setTodo("");
-      return;
-    }
-
-    if (todo !== "") {
-      setTodos([{ id: `${todo}-${Date.now()}`, todo }, ...todos]);
-      setTodo("");
-    }
-  };
-
-  const handleDelete = (id) => {
-    const delTodo = todos.filter((to) => to.id !== id);
-    setTodos([...delTodo]);
-  };
-
-  const handleEdit = (id) => {
-    const editTodo = todos.find((i) => i.id === id);
-    setTodo(editTodo.todo);
-    setEditId(id);
-  };
+    handleSubmit,
+    handleDelete,
+    handleEdit,
+  } = useContext(TodoContext);
 
   return (
     <div className="App">
