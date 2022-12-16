@@ -4,8 +4,46 @@
   justify-content: center;
   height: 100vh;
 background-color: grey;
+flex-direction: column;
 }
-.container {
+.App-header {
+  background-color: #282c34;
+  /* min-height: 10vh; */
+  /* color:aliceblue; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: large;
+} 
+.form{
+  display: flex;
+  flex-direction: column;
+  padding: 10px 20px;
+  
+
+}
+input{
+  border: none;
+  border-radius: 25px;
+  padding: 10px;
+  background-color:aquamarine;
+  
+}
+button{
+  border: none;
+  border-radius: 25px;
+  padding: 10px;
+  background-color:aquamarine;
+  margin-left: 20px;
+
+}
+
+/* .interform{
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+} */
+/* .container {
   display: flex;
   height: 80vh;
   border: 1px solid black;
@@ -49,17 +87,9 @@ button{
 }
 .todoText {
   flex: 1;
-}
+} */
 
-/* .App-header {
-  background-color: #282c34;
-  min-height: 10vh;
-  color:aliceblue;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  font-size: large;
-} 
+/* 
  .form{
   display: flex;
   height: 80vh;
