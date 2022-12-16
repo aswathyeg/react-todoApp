@@ -9,6 +9,8 @@ const TodoReducers = (state = { todos: [] }, action) => {
 
     case "DeleteTodo":
       return { todos: action.payload };
+    default:
+      return state;
   }
 };
 
