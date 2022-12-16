@@ -10,7 +10,7 @@ const App = () => {
       <h2>Redux Todo</h2>
 
       <div className="form">
-        <form className="interform">
+        <form className="interform" handleSubmit>
           <input type="text"></input>
           <button>Go</button>
         </form>
