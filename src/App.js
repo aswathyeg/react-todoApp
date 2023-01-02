@@ -7,7 +7,7 @@ const App = () => {
   return (
     <div className="App">
       <div className="container">
-        <h1>Todo List App</h1>
+        <h1>Docket App</h1>
         <TodoForm />
         <TodoList />
       </div>
