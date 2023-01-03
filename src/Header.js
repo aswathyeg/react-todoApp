@@ -1,22 +1,27 @@
-import React from "react";
-import { Navbar, Container } from "react-bootstrap";
-import "./App.css";
+import Nav from "react-bootstrap/Nav";
 
-const Header = () => {
+function BasicExample() {
   return (
-    <div>
-      <Navbar
-        style={{ height: 60 }}
-        className="nav-class"
-        bg="dark"
-        variant="dark"
-      >
-        <Container>
-          <Navbar.Brand variant="light">Docket App</Navbar.Brand>
-        </Container>
-      </Navbar>
-    </div>
+    <Nav
+      activeKey="/home"
+      // onSelect={(selectedKey) => alert(`selected ${selectedKey}`)}
+    >
+      <Nav.Item>
+        <Nav.Link href="/home">Home</Nav.Link>
+      </Nav.Item>
+      <Nav.Item>
+        <Nav.Link eventKey="link-1">Calender</Nav.Link>
+      </Nav.Item>
+      {/* <Nav.Item>
+        <Nav.Link eventKey="link-2">Link</Nav.Link>
+      </Nav.Item>
+      <Nav.Item>
+        <Nav.Link eventKey="disabled" disabled>
+          Disabled
+        </Nav.Link> 
+      </Nav.Item>*/}
+    </Nav>
   );
-};
+}
 
-export default Header;
+export default BasicExample;
