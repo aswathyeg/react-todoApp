@@ -65,4 +65,10 @@ a{
   }
   .todoText {
     flex: 1;
-  }  
+  } 
+  .header-container{
+     height: 1%;
+     display: flex;
+     justify-content:right !important;
+     
+  } 
