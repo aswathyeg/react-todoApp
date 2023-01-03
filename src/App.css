@@ -1,72 +1,15 @@
 
-a{
-  text-decoration: none!important;
-   color: inherit!important;
-}
-.nav-class{
-  display: flex;
-  background-color: #d94b0e;
-   /* height: 0 vh!important;  */
-   justify-content:left !important;
-   align-items: flex-start;
-}
+
+
+
+
+
 /* .nav-brand{
   display: flex;
   justify-content:left !important;
   align-items: flex-end;
 } */
-.App {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-background-color: rgb(242, 153, 10);
-}
-.container {
-  display: flex;
-  height: 80vh;
-  /* border: 1px solid black; */
-  padding: 20px;
-  flex-direction: column;
-  align-items:center;
-  font-size: 20px;
-  color: white;
-}
-.form{
-  color:aliceblue;
-  display: flex;
-  justify-content: space-around;
-  width: 450px;
-}
-input{
-  width: 80%;
-  padding: 10px;
-  border-radius: 40px;
-  border: none;
-}
-button{
-  border: none;
-  padding: 10px;
-  border-radius: 40px;
-  margin: 0 5px;
-}
-.allTodos {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-.singleTodo {
-  border-radius: 50px;
-  margin: 10px 0;
-  background-color: #d94b0e;
-  padding: 10px 20px;
-  display: flex;
-  width: 450px;
-  align-items: center;
-}
-.todoText {
-  flex: 1;
-}
+
 
 /* .App-header {
   background-color: #282c34;
