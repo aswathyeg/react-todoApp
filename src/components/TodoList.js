@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import "../App.css";
+import "../Styles.css";
 import { TodoContext } from "./context/Context";
 const TodoList = () => {
   const { todos, handleDelete, handleEdit } = useContext(TodoContext);
