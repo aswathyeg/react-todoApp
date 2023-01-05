@@ -19,7 +19,7 @@ a{
     align-items: center;
     justify-content: center;
     height: 100vh;
-  background-color: rgb(242, 153, 10);
+  background-color: rgb(237, 178, 84);
   }
   .container {
     display: flex;
@@ -53,11 +53,12 @@ a{
     list-style: none;
     margin: 0;
     padding: 0;
+    
   }
   .singleTodo {
     border-radius: 50px;
     margin: 10px 0;
-    background-color: #d94b0e;
+    background-color: #d66433;
     padding: 10px 20px;
     display: flex;
     width: 450px;
@@ -69,6 +70,18 @@ a{
   .header-container{
      height: 1%;
      display: flex;
-     justify-content:right !important;
+     flex-direction: row;
+     
+     /* justify-content:right !important; */
      
   } 
+  .nav-item{
+    /* height: 1%;
+    display: flex; */
+  margin-left: 2px;
+  }
+  .brand{
+    
+    justify-content:left!important;
+
+  }
