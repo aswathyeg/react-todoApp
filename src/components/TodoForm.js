@@ -8,7 +8,7 @@ const TodoForm = () => {
       <input
         type="text"
         value={todo}
-        className="inputField"
+        placeholder="write your plan"
         onChange={(e) => {
           setTodo(e.target.value);
         }}
