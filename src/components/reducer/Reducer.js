@@ -3,6 +3,7 @@ export const todoReducer = (state, action) => {
     case "Add":
       return {
         ...state,
+        todos: [action.payload, ...state.todos],
       };
     case "Edit":
     case "Delete":
