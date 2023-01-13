@@ -1,42 +1,16 @@
 import React, { useState, createContext } from "react";
 export const TodoContext = createContext();
+// Initial state
+const initialState = {
+  todos: [],
+};
 
-const Context = ({ children }) => {
-  const [todo, setTodo] = useState("");
-  const [todos, setTodos] = useState([]);
-  const [editId, setEditId] = useState(0);
+//createContext
+export const GlobalContext = createContext(initialState);
+//provider component
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-
-    if (editId) {
-      const editTodo = todos.find((i) => i.id === editId);
-      const updatedTodos = todos.map((t) =>
-        t.id === editTodo.id
-          ? (t = { id: t.id, todo })
-          : { id: t.id, todo: t.todo }
-      );
-      setTodos(updatedTodos);
-      setEditId(0);
-      setTodo("");
-      return;
-    }
-
-    if (todo !== "") {
-      setTodos([{ id: `${todo}-${Date.now()}`, todo }, ...todos]);
-      setTodo("");
-    }
-  };
-
-  const handleDelete = (id) => {
-    const delTodo = todos.filter((to) => to.id !== id);
-    setTodos([...delTodo]);
-  };
-  const handleEdit = (id) => {
-    const editTodo = todos.find((i) => i.id === id);
-    setTodo(editTodo.todo);
-    setEditId(id);
-  };
+export const GlobalProvider = ({ children }) => {
+  const [state, dispatch] = useReducer(AppReducer, initialState);
 
   return (
     <TodoContext.Provider
