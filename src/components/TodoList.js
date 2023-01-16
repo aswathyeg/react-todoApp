@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useContext } from "react";
 import "../App.css";
-const TodoList = ({ todos, handleDelete, handleEdit }) => {
+import { TodoContext } from "./context/Context";
+const TodoList = () => {
+  const { todos, handleDelete, handleEdit } = useContext(TodoContext);
   return (
     <ul className="allTodos">
       {todos.map((todos) => (
