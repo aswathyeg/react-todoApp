@@ -2,10 +2,10 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
-import Context from "./components/context/Context";
+import TodoContext from "./components/context/TodoContext";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <Context>
+  <TodoContext>
     <App />
-  </Context>
+  </TodoContext>
 );
