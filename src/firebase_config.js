@@ -1,13 +1,15 @@
-import firebase from "firebase";
+// import firebase from "firebase";
 
+// Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyA-95G9laGX8ua2CpmiuPuSBbDryguIZb8",
-  authDomain: "react-docket-app.firebaseapp.com",
-  projectId: "react-docket-app",
-  storageBucket: "react-docket-app.appspot.com",
-  messagingSenderId: "625361759196",
-  appId: "1:625361759196:web:b5b90ef882da0c14e17d19",
+  apiKey: "AIzaSyACnxRQHd_pQe3svxqL_jJt362GC_Bo8rM",
+  authDomain: "react-docket-recent-app.firebaseapp.com",
+  projectId: "react-docket-recent-app",
+  storageBucket: "react-docket-recent-app.appspot.com",
+  messagingSenderId: "490136428252",
+  appId: "1:490136428252:web:2a8894fa4ca2730096de19",
 };
-firebase.initializeApp(firebaseConfig);
-const db = firebase.firestore();
-export { db };
+
+// firebase.initializeApp(firebaseConfig);
+// const db = firebase.firestore();
+// export { db };
