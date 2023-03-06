@@ -1,4 +1,6 @@
 import React, { useState, createContext } from "react";
+import * as firebase from "firebase";
+import { db } from "../../firebase_config";
 export const TodoContext = createContext();
 
 const Context = ({ children }) => {
@@ -9,23 +11,29 @@ const Context = ({ children }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    if (editId) {
-      const editTodo = todos.find((i) => i.id === editId);
-      const updatedTodos = todos.map((t) =>
-        t.id === editTodo.id
-          ? (t = { id: t.id, todo })
-          : { id: t.id, todo: t.todo }
-      );
-      setTodos(updatedTodos);
-      setEditId(0);
-      setTodo("");
-      return;
-    }
+    // if (editId) {
+    //   const editTodo = todos.find((i) => i.id === editId);
+    //   const updatedTodos = todos.map((t) =>
+    //     t.id === editTodo.id
+    //       ? (t = { id: t.id, todo })
+    //       : { id: t.id, todo: t.todo }
+    //   );
+    //   setTodos(updatedTodos);
+    //   setEditId(0);
+    //   setTodo("");
+    //   return;
+    // }
 
-    if (todo !== "") {
-      setTodos([{ id: `${todo}-${Date.now()}`, todo }, ...todos]);
-      setTodo("");
-    }
+    // if (todo !== "") {
+    //   setTodos([{ id: `${todo}-${Date.now()}`, todo }, ...todos]);
+    //   setTodo("");
+    // }
+
+    //add to firebase
+    db.collection("dockets").add({
+      todos: todos,
+    });
+    setTodos("");
   };
 
   const handleDelete = (id) => {
